@@ -18,7 +18,7 @@ def build_comment(imgur_url):
             rehosted your image to imgur because high traffic can break 
             dropbox.com links.\n\n'''
 
-    body = '[Here is the rehosted image](' + imgur_url + ')\n\n'
+    body = '[Here is the rehosted image](' + imgur_url.replace('i.imgur', 'imgur')[:-4] + ') ^[Direct Link](' + imgur_url ')\n\n'
 
     tail = '''This action was performed by a bot. If there is an issue or
             problem, please report it below.\n\n'''
